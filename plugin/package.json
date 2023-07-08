@@ -1,0 +1,55 @@
+{
+  "name": "product-plugin",
+  "version": "0.0.1",
+  "description": "A starter for Medusa projects.",
+  "author": "Sebastian Rindom <skrindom@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "sqlite",
+    "postgres",
+    "typescript",
+    "ecommerce",
+    "headless",
+    "medusa"
+  ],
+  "scripts": {
+    "clean": "cross-env ./node_modules/.bin/rimraf dist",
+    "build": "medusa-admin bundle"
+  },
+  "devDependencies": {
+    "@medusajs/admin": "6.0.2-beta-20230705211101",
+    "@medusajs/medusa": "1.12.2-beta-20230705211101",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.8.0",
+    "jest": "^27.3.1",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.spec.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/node_modules/"
+    ],
+    "rootDir": "src",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "transform": {
+      ".ts": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
+  }
+}
